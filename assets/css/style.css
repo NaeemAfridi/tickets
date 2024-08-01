@@ -8,6 +8,10 @@ body {
   font-family: Arial, sans-serif;
 }
 
+a {
+  color: white;
+}
+
 :root {
   --primary-bg: #56c6d4;
   --orange: #fe980f;
@@ -342,6 +346,393 @@ nav ul li a:hover {
   color: #fe980f;
 }
 
+/* ===============================================
+                Exculsive page styles
+===========================================*/
+.header-shape {
+  width: 100%;
+  height: 50vh;
+  background-color: rgb(8, 8, 94);
+  clip-path: polygon(0 0, 100% 0, 100% 79%, 0 17%);
+}
+
+.footer-shape {
+  width: 100%;
+  height: 50vh;
+  background-color: rgb(8, 8, 94);
+  clip-path: polygon(0 17%, 100% 79%, 100% 100%, 0 100%);
+}
+
+.exclusive-bundles {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.exclusive-bundles h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: var(--orange);
+}
+
+.bundles-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.bundle-card {
+  background-color: var(--orange);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bundle-card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background-color: var(--primary-bg);
+}
+
+.bundle-card h3 {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #fff;
+  text-align: start;
+}
+
+.bundle-card .discount {
+  font-size: 20px;
+  color: #fff;
+  margin: 0px 0;
+}
+
+.bundle-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.confirm-btn {
+  background-color: var(--primary-bg);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+}
+
+/* ===============================================
+                checkout page styles
+===========================================*/
+.checkout {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.checkout-form,
+.order-summary {
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+  min-width: 300px;
+  margin: 10px;
+}
+
+.checkout-form {
+  max-width: 600px;
+}
+
+.checkout-form h2,
+.order-summary h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.checkout-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-form input {
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgb(8, 8, 94);
+  color: #fff;
+  width: 80%;
+}
+
+.checkout-form button:hover {
+  background-color: #45a4b1;
+}
+
+.order-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background-color: rgb(8, 8, 94);
+  color: #fff;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-bg);
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  margin: auto;
+}
+
+.order-summary h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--orange);
+  text-align: center;
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.summary-item img {
+  max-width: 40%;
+  height: 20vh;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.product-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summary-total p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.summary-total input {
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #56c6d4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ===============================================
+                Payment Methods page styles
+===========================================*/
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 70%;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.payment-methods h2 {
+  text-align: start;
+  font-size: 28px;
+  color: var(--orange);
+}
+
+.payment-options {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.payment-option {
+  position: relative;
+  background-color: #ffffff;
+  border: 2px solid #56c6d4;
+  color: #333;
+  padding: 5px 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.payment-option input {
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.payment-option span {
+  display: inline-block;
+}
+
+.payment-option input:checked {
+  background-color: #56c6d4;
+  color: #ffffff;
+  border-color: #45a4b1;
+}
+
+.payment-option:hover {
+  background-color: #56c6d4;
+  color: #ffffff;
+  border-color: #45a4b1;
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+.card-info input {
+  width: 70%;
+  background-color: #ffffff;
+  border: 2px solid #56c6d4;
+  color: #333;
+  padding: 10px 30px;
+  font-size: 18px;
+  border-radius: 30px;
+}
+
+.input-row {
+  display: flex;
+  gap: 20px;
+}
+
+.input-row input {
+  width: 30%;
+}
+
+/* ===============================================
+              Login page styles
+===========================================*/
+.login-container {
+  position: relative;
+  width: 60%;
+  height: 100vh;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-shape {
+  top: 10px;
+  right: -200px;
+}
+
+.background-shape1 {
+  top: 200px;
+  left: 100px;
+}
+
+.background-shape,
+.background-shape1 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, orange, rgb(229, 156, 20));
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.login-form {
+  position: relative;
+  z-index: 1;
+}
+
+.login-form h2 {
+  text-align: start;
+  margin-bottom: 40px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #56c6d4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #45a4b1;
+}
+
+.forgot-password {
+  display: block;
+  text-align: end;
+  margin-top: 10px;
+  color: blue;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.signup-text {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+
+.signup-text a {
+  color: blue;
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
 /* ====================== Responsive Styles ==============================*/
 @media (max-width: 768px) {
   nav {
@@ -360,5 +751,18 @@ nav ul li a:hover {
   .latest-news span {
     font-size: 20px;
     padding: 0 50px;
+  }
+
+  .login-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .background-shape,
+  .background-shape1 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
   }
 }
